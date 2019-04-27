@@ -15,16 +15,16 @@ knitr::opts_chunk$set(echo = TRUE, fig.align = "center", message = FALSE, warnin
 
 ## Eksplorasi Data
 
-Sebelum melakukan pembuatan grafik, Anda harus terlebih dahulu mengetahui informasi apa yang disimpan dalam sebuah dataset. Contohnya Anda setidaknya harus mengetahui informasi jumlah kolom/variabel, jumlah baris/observasi, nama setiap kolom, dan jenis data setiap kolom. Di bawah ini terdapat beberapa fungsi dasar yang tersedia di R untuk mengetahui informasi dari sebuah dataset (dalam contoh ini Anda akan menggunakan dataset iris). Jalankan baris kode tersebut satu per satu menggunakan pemintas **Ctrl + Enter** dan kemudian cari informasi mengenai tujuan penggunaan dari setiap ungsi tersebut dengan menjalankan `help(nama_fungsi)` atau `?nama_fungsi` di konsol RStudio! Tulislah kegunaan dari setiap fungsi secara singkat dengan cara mengisi bagian ___!
+Sebelum melakukan pembuatan grafik, Anda harus terlebih dahulu mengetahui informasi apa yang disimpan dalam sebuah dataset. Contohnya Anda setidaknya harus mengetahui informasi jumlah kolom/variabel, jumlah baris/observasi, nama setiap kolom, dan jenis data setiap kolom. Di bawah ini terdapat beberapa fungsi dasar yang tersedia di R untuk mengetahui informasi dari sebuah dataset (dalam contoh ini Anda akan menggunakan dataset iris). Jalankan baris kode tersebut satu per satu menggunakan pemintas **Ctrl + Enter** dan kemudian cari informasi mengenai tujuan penggunaan dari setiap fungsi tersebut dengan menjalankan `help(nama_fungsi)` atau `?nama_fungsi` di konsol RStudio! Tulislah kegunaan dari setiap fungsi secara singkat dengan cara mengisi bagian ___!
 
 ```{r explore-iris1}
 iris # mencetak data di konsol
-dim(iris) # ___
-str(iris) # ___
-colnames(iris) # ___
-head(iris) # ___
-tail(iris) # ___
-summary(iris) # ___
+dim(iris) # mengetahui dimensi dari sebuah objek
+str(iris) # menunjukkan struktur dari sebuah objek R
+colnames(iris) # menunjukkan nama baris dan kolom
+head(iris) # menunjukkan 6 baris pertama dari sebuah objek
+tail(iris) # menunjukkan 6 baris terakhir dari sebuah objek
+summary(iris) # menampilkan summary dari objek
 iris$Sepal.Length # ekstraksi kolom 'Sepal.Length' dari dataset iris. Jalankan help(`[`) untuk membaca dokumentasi
 class(iris$Species) # ___
 length(iris$Petal.Width) # ___
@@ -56,7 +56,7 @@ skim(typical_data)
 Aktivitas pembuatan grafik tidak dapat dilepaskan dari aktivitas transformasi data. Salah satu paket yang umum digunakan untuk melakukan transformasi data adalah dplyr. Sekarang aktifkanlah paket tersebut dengan cara mengganti bagian ___ dengan jawaban yang tepat! (Catatan: jika Anda belum memasang paket dplyr, pasanglah paket tersebut terlebih dahulu melalui menu **Tools -- Install Packages...**)
 
 ```{r load-package}
-library(___)
+library(dplyr)
 ```
 
 Terdapat beberapa fungsi utama dari paket dplyr untuk melakukan transformasi data, diantaranya:
@@ -98,10 +98,10 @@ identical(storms_nopipe, storms_pipe) # membandingkan dua dataset, hasilnya TRUE
 
 Buatlah rangkuman tahapan-tahapan apa yang dilakukan untuk melakukan transformasi dataset storms diatas!
 
-1. ___
-2. ___
-3. ___
-4. ___
-5. ___
+1. Memilih kolom year, month, wind, dan pressure dari dataset storms
+2. Memilih baris dengan tahun antara 2000 hingga 2015
+3. Mengubah nilai dari kolom month yang semula angka menjadi nama bulan
+4. Melakukan grouping berdasarkan kolom month
+5. Menghitung rerata kecepatan angin dan rerata tekanan udara
 
 Sekarang Anda dipersilahkan klik tombol **Knit** atau menjalankan pemintas **Ctrl + Shift + K** untuk mengkonversi dokumen R Markdown ini menjadi dokumen final (dokumen berekstensi .md). Kemudian silakan unggah hasil kerja Anda ke repositori GitHub dengan cara yang telah ditunjukan oleh instruktur. Setelah berhasil, silakan akses berkas 002_eksplor-transform.md dalam direktori vignettes di repositori GitHub milik Anda tersebut.

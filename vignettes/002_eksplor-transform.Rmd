@@ -105,3 +105,4 @@ Buatlah rangkuman tahapan-tahapan apa yang dilakukan untuk melakukan transformas
 5. Menghitung rerata kecepatan angin dan rerata tekanan udara
 
 Sekarang Anda dipersilahkan klik tombol **Knit** atau menjalankan pemintas **Ctrl + Shift + K** untuk mengkonversi dokumen R Markdown ini menjadi dokumen final (dokumen berekstensi .md). Kemudian silakan unggah hasil kerja Anda ke repositori GitHub dengan cara yang telah ditunjukan oleh instruktur. Setelah berhasil, silakan akses berkas 002_eksplor-transform.md dalam direktori vignettes di repositori GitHub milik Anda tersebut.
+?legend.position
